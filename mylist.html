@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My List - MediaHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .my-list-header {
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+    }
+    
+    .my-list-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+    
+    @media (min-width: 640px) {
+      .my-list-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .my-list-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .my-list-grid {
+        grid-template-columns: repeat(5, 1fr);
+        margin-left: 14rem; /* Sidebar width */
+      }
+    }
+    
+    .empty-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 1rem;
+      margin-top: 4rem;
+    }
+    
+    .empty-list i {
+      font-size: 4rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+    
+    .empty-list h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .empty-list p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      max-width: 36rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-primary">Media</span>
+            <span class="logo-secondary">Hub</span>
+          </a>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="movies.html">Movies</a>
+          <a href="tvshows.html">TV Shows</a>
+          <a href="mylist.html" class="active">My List</a>
+        </nav>
+        
+        <!-- User Actions -->
+        <div class="user-actions">
+          <!-- Search Bar -->
+          <div class="search-container">
+            <input type="text" placeholder="Search" class="search-bar">
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          
+          <!-- User Profile -->
+          <div class="user-profile">
+            <button class="profile-button">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=40&h=40&q=80" alt="User profile">
+              <i class="fas fa-caret-down"></i>
+            </button>
+            
+            <!-- Dropdown menu (hidden by default) -->
+            <div class="profile-dropdown">
+              <a href="#">Profile</a>
+              <a href="#">Settings</a>
+              <a href="#">Sign out</a>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="content-wrapper">
+      <!-- Sidebar for Categories (hidden on mobile) -->
+      <aside class="sidebar">
+        <h3 class="sidebar-title">My List</h3>
+        <ul class="category-list">
+          <li><a href="#" class="category-item">All Items</a></li>
+          <li><a href="#" class="category-item">Movies</a></li>
+          <li><a href="#" class="category-item">TV Shows</a></li>
+          <li><a href="#" class="category-item">Recently Added</a></li>
+        </ul>
+        
+        <h3 class="sidebar-title">Filters</h3>
+        <div class="filters">
+          <div class="filter-group">
+            <label>Sort By</label>
+            <select>
+              <option>Date Added</option>
+              <option>Name A-Z</option>
+              <option>Rating</option>
+              <option>Release Year</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label>Genre</label>
+            <select>
+              <option>All Genres</option>
+              <option>Action</option>
+              <option>Comedy</option>
+              <option>Drama</option>
+              <option>Sci-Fi</option>
+            </select>
+          </div>
+        </div>
+      </aside>
+      
+      <!-- My List Content -->
+      <div class="main-content">
+        <div class="my-list-header">
+          <h1 class="row-title">My List</h1>
+          <p class="text-secondary">Items you save to your list appear here.</p>
+        </div>
+        
+        <!-- Example empty list state -->
+        <div class="empty-list">
+          <i class="fas fa-list"></i>
+          <h2>Your list is empty</h2>
+          <p>Add movies and TV shows to your list to keep track of what you want to watch.</p>
+          <a href="index.html" class="btn btn-primary">Browse content</a>
+        </div>
+        
+        <!-- Example populated list state (hidden by default) -->
+        <div class="my-list-grid" style="display: none;">
+          <div class="media-card">
+            <div class="media-image">
+              <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Inception">
+              <div class="play-overlay">
+                <button class="play-button">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="media-info">
+              <h3>Inception</h3>
+              <div class="media-meta">
+                <span>2010</span>
+                <span>8.8 ⭐</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="media-card">
+            <div class="media-image">
+              <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Breaking Bad">
+              <div class="play-overlay">
+                <button class="play-button">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="media-info">
+              <h3>Breaking Bad</h3>
+              <div class="media-meta">
+                <span>2008-2013</span>
+                <span>9.5 ⭐</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="media-card">
+            <div class="media-image">
+              <img src="https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Matrix">
+              <div class="play-overlay">
+                <button class="play-button">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="media-info">
+              <h3>The Matrix</h3>
+              <div class="media-meta">
+                <span>1999</span>
+                <span>8.7 ⭐</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="media-card">
+            <div class="media-image">
+              <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Office">
+              <div class="play-overlay">
+                <button class="play-button">
+                  <i class="fas fa-play"></i>
+                </button>
+              </div>
+            </div>
+            <div class="media-info">
+              <h3>The Office</h3>
+              <div class="media-meta">
+                <span>2005-2013</span>
+                <span>8.9 ⭐</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-title">MediaHub</h3>
+          <p>
+            Your ultimate entertainment destination. Stream movies, TV shows, and more anytime, anywhere.
+          </p>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Devices</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Corporate Information</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2023 MediaHub. All rights reserved.</p>
+        </div>
+        
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/github-pages.js"></script>
+</body>
+</html>

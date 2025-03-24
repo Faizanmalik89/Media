@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Shows - MediaHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-primary">Media</span>
+            <span class="logo-secondary">Hub</span>
+          </a>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="movies.html">Movies</a>
+          <a href="tvshows.html" class="active">TV Shows</a>
+          <a href="mylist.html">My List</a>
+        </nav>
+        
+        <!-- User Actions -->
+        <div class="user-actions">
+          <!-- Search Bar -->
+          <div class="search-container">
+            <input type="text" placeholder="Search" class="search-bar">
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          
+          <!-- User Profile -->
+          <div class="user-profile">
+            <button class="profile-button">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=40&h=40&q=80" alt="User profile">
+              <i class="fas fa-caret-down"></i>
+            </button>
+            
+            <!-- Dropdown menu (hidden by default) -->
+            <div class="profile-dropdown">
+              <a href="#">Profile</a>
+              <a href="#">Settings</a>
+              <a href="#">Sign out</a>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- TV Shows Hero Section -->
+    <section class="hero">
+      <!-- Hero Background -->
+      <div class="hero-background">
+        <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=80" alt="Featured TV show backdrop">
+        <!-- Gradient Overlay -->
+        <div class="overlay gradient-top"></div>
+        <div class="overlay gradient-left"></div>
+      </div>
+      
+      <!-- Hero Content -->
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">NEW SEASON</div>
+          <h1 class="hero-title">Breaking Bad</h1>
+          <div class="hero-meta">
+            <span class="match">96% Match</span>
+            <span>2008-2013</span>
+            <span class="rating">TV-MA</span>
+            <span>5 Seasons</span>
+            <span class="quality">4K</span>
+          </div>
+          <p class="hero-description">
+            A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary">
+              <i class="fas fa-play"></i> Play
+            </button>
+            <button class="btn btn-secondary">
+              <i class="fas fa-info-circle"></i> More Info
+            </button>
+            <button class="btn btn-icon">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="content-wrapper">
+      <!-- Sidebar for Categories (hidden on mobile) -->
+      <aside class="sidebar">
+        <h3 class="sidebar-title">Categories</h3>
+        <ul class="category-list">
+          <li><a href="#" class="category-item">Drama</a></li>
+          <li><a href="#" class="category-item">Comedy</a></li>
+          <li><a href="#" class="category-item">Sci-Fi</a></li>
+          <li><a href="#" class="category-item">Crime</a></li>
+          <li><a href="#" class="category-item">Horror</a></li>
+          <li><a href="#" class="category-item">Documentary</a></li>
+          <li><a href="#" class="category-item">Animation</a></li>
+          <li><a href="#" class="category-item">Family</a></li>
+          <li><a href="#" class="category-item">Fantasy</a></li>
+          <li><a href="#" class="category-item">Reality</a></li>
+        </ul>
+        
+        <h3 class="sidebar-title">Filters</h3>
+        <div class="filters">
+          <div class="filter-group">
+            <label>Release Year</label>
+            <select>
+              <option>All Years</option>
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+              <option>2020</option>
+              <option>Older</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <label>Rating</label>
+            <select>
+              <option>All Ratings</option>
+              <option>5+ Stars</option>
+              <option>4+ Stars</option>
+              <option>3+ Stars</option>
+            </select>
+          </div>
+        </div>
+      </aside>
+      
+      <!-- Main Content Area -->
+      <div class="main-content">
+        <!-- Content Rows -->
+        <section class="content-row">
+          <div class="row-header">
+            <h2 class="row-title">Popular Dramas</h2>
+            <button class="row-more">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          
+          <div class="media-row">
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Breaking Bad">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Breaking Bad</h3>
+                <div class="media-meta">
+                  <span>2008-2013</span>
+                  <span>9.5 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1601513445506-2ab0d4fb4229?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Game of Thrones">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Game of Thrones</h3>
+                <div class="media-meta">
+                  <span>2011-2019</span>
+                  <span>9.2 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Better Call Saul">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Better Call Saul</h3>
+                <div class="media-meta">
+                  <span>2015-2022</span>
+                  <span>8.9 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Wire">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>The Wire</h3>
+                <div class="media-meta">
+                  <span>2002-2008</span>
+                  <span>9.3 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Sopranos">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>The Sopranos</h3>
+                <div class="media-meta">
+                  <span>1999-2007</span>
+                  <span>9.2 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Succession">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Succession</h3>
+                <div class="media-meta">
+                  <span>2018-2023</span>
+                  <span>8.8 ⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="content-row">
+          <div class="row-header">
+            <h2 class="row-title">Sci-Fi & Fantasy</h2>
+            <button class="row-more">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          
+          <div class="media-row">
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Stranger Things">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Stranger Things</h3>
+                <div class="media-meta">
+                  <span>2016-Present</span>
+                  <span>8.7 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Mandalorian">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>The Mandalorian</h3>
+                <div class="media-meta">
+                  <span>2019-Present</span>
+                  <span>8.7 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Last of Us">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>The Last of Us</h3>
+                <div class="media-meta">
+                  <span>2023-Present</span>
+                  <span>8.8 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1601513445506-2ab0d4fb4229?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Westworld">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Westworld</h3>
+                <div class="media-meta">
+                  <span>2016-2022</span>
+                  <span>8.5 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Black Mirror">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Black Mirror</h3>
+                <div class="media-meta">
+                  <span>2011-Present</span>
+                  <span>8.8 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1512070679279-8988d32161be?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Witcher">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>The Witcher</h3>
+                <div class="media-meta">
+                  <span>2019-Present</span>
+                  <span>8.2 ⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="content-row">
+          <div class="row-header">
+            <h2 class="row-title">Comedy Series</h2>
+            <button class="row-more">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          
+          <div class="media-row">
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="The Office">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>The Office</h3>
+                <div class="media-meta">
+                  <span>2005-2013</span>
+                  <span>8.9 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Friends">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Friends</h3>
+                <div class="media-meta">
+                  <span>1994-2004</span>
+                  <span>8.9 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Brooklyn Nine-Nine">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Brooklyn Nine-Nine</h3>
+                <div class="media-meta">
+                  <span>2013-2021</span>
+                  <span>8.4 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Parks and Recreation">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Parks and Recreation</h3>
+                <div class="media-meta">
+                  <span>2009-2015</span>
+                  <span>8.6 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Ted Lasso">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Ted Lasso</h3>
+                <div class="media-meta">
+                  <span>2020-2023</span>
+                  <span>8.8 ⭐</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="media-card">
+              <div class="media-image">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=200&q=80" alt="Schitt's Creek">
+                <div class="play-overlay">
+                  <button class="play-button">
+                    <i class="fas fa-play"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="media-info">
+                <h3>Schitt's Creek</h3>
+                <div class="media-meta">
+                  <span>2015-2020</span>
+                  <span>8.5 ⭐</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-title">MediaHub</h3>
+          <p>
+            Your ultimate entertainment destination. Stream movies, TV shows, and more anytime, anywhere.
+          </p>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Devices</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Corporate Information</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2023 MediaHub. All rights reserved.</p>
+        </div>
+        
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/github-pages.js"></script>
+</body>
+</html>

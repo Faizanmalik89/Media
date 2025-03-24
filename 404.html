@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - MediaHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 80vh;
+      padding: 2rem;
+    }
+    
+    .error-icon {
+      font-size: 5rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .error-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .error-message {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 40rem;
+    }
+    
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-primary">Media</span>
+            <span class="logo-secondary">Hub</span>
+          </a>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="movies.html">Movies</a>
+          <a href="tvshows.html">TV Shows</a>
+          <a href="mylist.html">My List</a>
+        </nav>
+        
+        <!-- User Actions -->
+        <div class="user-actions">
+          <!-- Search Bar -->
+          <div class="search-container">
+            <input type="text" placeholder="Search" class="search-bar">
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          
+          <!-- User Profile -->
+          <div class="user-profile">
+            <button class="profile-button">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=40&h=40&q=80" alt="User profile">
+              <i class="fas fa-caret-down"></i>
+            </button>
+            
+            <!-- Dropdown menu (hidden by default) -->
+            <div class="profile-dropdown">
+              <a href="#">Profile</a>
+              <a href="#">Settings</a>
+              <a href="#">Sign out</a>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="error-container">
+      <i class="fas fa-film error-icon"></i>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-message">
+        We're sorry, but the page you're looking for can't be found. It might have been moved, deleted, or never existed.
+      </p>
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-primary">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="movies.html" class="btn btn-secondary">
+          <i class="fas fa-film"></i> Browse Movies
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-title">MediaHub</h3>
+          <p>
+            Your ultimate entertainment destination. Stream movies, TV shows, and more anytime, anywhere.
+          </p>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Devices</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-heading">Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Corporate Information</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2023 MediaHub. All rights reserved.</p>
+        </div>
+        
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/github-pages.js"></script>
+  <script>
+    // Additional 404 page specific script
+    document.addEventListener('DOMContentLoaded', function() {
+      // Try to detect what page the user might have been looking for
+      const path = window.location.pathname;
+      const pathSegments = path.split('/').filter(segment => segment.length > 0);
+      
+      console.log('404 page: Unable to find page at path:', path);
+      
+      // Optionally provide better guidance based on the URL
+      if (pathSegments.length > 0) {
+        const lastSegment = pathSegments[pathSegments.length - 1].toLowerCase();
+        
+        if (lastSegment.includes('movie') || lastSegment.includes('film')) {
+          document.querySelector('.error-message').innerHTML += '<br>Looking for a movie? Try browsing our <a href="movies.html">Movies section</a>.';
+        } else if (lastSegment.includes('tv') || lastSegment.includes('show') || lastSegment.includes('series')) {
+          document.querySelector('.error-message').innerHTML += '<br>Looking for a TV show? Check out our <a href="tvshows.html">TV Shows section</a>.';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
